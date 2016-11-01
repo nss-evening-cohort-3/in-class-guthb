@@ -24,6 +24,7 @@ namespace BasicsOfForms
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                    "~/scripts/angular.js",
                      "~/Scripts/app.js"));
             
 
