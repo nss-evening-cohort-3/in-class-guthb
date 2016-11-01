@@ -1,5 +1,6 @@
 ﻿@{
-    Layout = null;
+    //Layout = null;
+    ViewBag.Title = "Index";
 }
 
 <!DOCTYPE html>
@@ -9,9 +10,24 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
 </head>
+
 <body>
-    <div>
-    
+   
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+        <h2>Index</h2>
+            <form method="POST" action="/Basics/Index">
+                @Html.AntiForgeryToken()
+                <input type="text" name="email"/>
+                <input type="text" name="password" />
+                <input type="text" name="PassowrdConfirmation" />
+                <input type="submit" value="SUBMIT!"/>
+
+            </form>
+
+        </div>
     </div>
+
 </body>
 </html>
