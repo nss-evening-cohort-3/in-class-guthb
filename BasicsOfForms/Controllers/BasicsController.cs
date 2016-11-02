@@ -22,11 +22,21 @@ namespace BasicsOfForms.Controllers
             return View();
         }
 
-        // GET: Basics
-        public ActionResult Razor(FormCollection form)
+        // GET: Basics RAZOR
+        public ActionResult Razor()
         {
             return View();
         }
+
+        //POST: Basics Razor
+        [HttpPost]
+        public ActionResult Razor(FormCollection form)
+        {
+            int i = 0;
+            return View();
+        }
+
+
 
     }
 }
