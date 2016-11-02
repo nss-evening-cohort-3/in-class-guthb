@@ -16,9 +16,15 @@ namespace BasicsOfForms.Controllers
 
         //POST:
         [HttpPost]
-        public ActionResult Index(FormCollection form )
+        public ActionResult Index(FormCollection form)
         {
             int i = 0;
+            return View();
+        }
+
+        // GET: Basics
+        public ActionResult Razor(FormCollection form)
+        {
             return View();
         }
 
