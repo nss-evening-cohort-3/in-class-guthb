@@ -8,13 +8,13 @@ using System.Web.Mvc;
 
 namespace BasicsOfForms.Controllers
 {
-    public class BasicsController : ApiController
+    public class BasicsController : Controller
     {
-        //GET
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
+        //GET Index
+        public ActionResult Index()
+        {
+           return View();
+        }
 
     }
 }
