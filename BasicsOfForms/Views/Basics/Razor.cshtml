@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Razor";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<!--Controler action , Controller -->
+@using (Html.BeginForm("Razor", "Basics", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+
+        <fieldset>
+
+            <div id="razorEmail" class="col-md-10">
+                @Html.TextBox("email")
+            </div>
+            <div id="razorPassword" class="col-md-10">
+                @Html.Password("password")
+            </div>
+            <div id="razorPasswordConfirmation" class="col-md-10">
+                @Html.Password("PasswordConfirmation")
+            </div>
+            <div id="razorSubmit" class="col-md-offset-2 col-md-1">
+                <input type="submit" class="btn btn-default" value="SUBMIT!" />
+            </div>
+
+        </fieldset>
+    </div>
+}
