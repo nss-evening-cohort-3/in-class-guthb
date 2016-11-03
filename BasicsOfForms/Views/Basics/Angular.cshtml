@@ -3,5 +3,31 @@
     ViewBag.Title = "Angular";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div ng-controller="FormController"></div>
+<h2>@ViewBag.Title</h2>
+<div ng-controller="FormController">
+     <!--Controler action , Controller -->
+@using (Html.BeginForm("", "", FormMethod.Post, new {id="AngularForm", @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-group">
+
+        <fieldset>
+
+            <div id="razorEmail" class="col-md-10">
+                @Html.TextBox("email")
+            </div>
+            <div id="razorPassword" class="col-md-10">
+                @Html.Password("password")
+            </div>
+            <div id="razorPasswordConfirmation" class="col-md-10">
+                @Html.Password("PasswordConfirmation")
+            </div>
+            <div id="razorSubmit" class="col-md-offset-2 col-md-1">
+                <button ng-click="formSubmit($event)">"SUBMIT!"</button>
+            </div>
+
+        </fieldset>
+    </div>
+}
+</div>
