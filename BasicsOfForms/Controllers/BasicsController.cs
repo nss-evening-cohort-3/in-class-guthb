@@ -38,5 +38,12 @@ namespace BasicsOfForms.Controllers
             return View();
         }
 
+        // GET: Basics Angular  (action)
+        public ActionResult Angular()
+        {
+            return View();
+        }
+
+
     }
 }
